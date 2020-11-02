@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+.ng-valid[required], .ng-valid.required  {
+    border-left: 2px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 2px solid #a94442; /* red */
+  }
+
+  .message {
+    color: #FF0000;
+    font-size: small;
+    font-weight: lighter;
+    white-space: pre;
+  }
+  #avatar {
+    background-image: url('https://www.w3schools.com/howto/img_avatar.png');
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: top center;
+    border-radius: 50%;
+    float:right;
+}
+#avatarlist {
+  background-image: url('https://www.w3schools.com/howto/img_avatar.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-position: top center;
+  border-radius: 50%;
+  
+}
+#deletecontact:hover {
+  color: red;
+}

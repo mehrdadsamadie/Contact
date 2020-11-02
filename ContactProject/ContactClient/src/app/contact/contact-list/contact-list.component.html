@@ -1,0 +1,39 @@
+<input type="text" class="form-control" [ngModel]="service.gridValue.SearchStr"
+    (ngModelChange)="changedExtraHandler($event)" placeholder="Search...">
+<table class="table table-hover">
+    <tr>
+        <th>Photo</th>
+        <th><a (click)="setSort('Name')" href="#">Name<span *ngIf="service.gridValue.Column==='Name'"><i class="material-icons" *ngIf="service.gridValue.Sort==='asc'">keyboard_arrow_down</i> <i class="material-icons" *ngIf="service.gridValue.Sort==='desc'"> keyboard_arrow_up</i></span></a></th>
+        <th><a (click)="setSort('LastName')" href="#">Last Name<span *ngIf="service.gridValue.Column==='LastName'"><i class="material-icons" *ngIf="service.gridValue.Sort==='asc'">keyboard_arrow_down</i> <i class="material-icons" *ngIf="service.gridValue.Sort==='desc'"> keyboard_arrow_up</i></span></a></th>
+        <th><a (click)="setSort('Email')" href="#">Email<span *ngIf="service.gridValue.Column==='Email'"><i class="material-icons" *ngIf="service.gridValue.Sort==='asc'">keyboard_arrow_down</i> <i class="material-icons" *ngIf="service.gridValue.Sort==='desc'"> keyboard_arrow_up</i></span></a></th>
+        <th>Delete</th>
+    </tr>
+    <tr *ngFor="let item of service.listContact.List;">
+        <td (click)=update(item)><img id="avatarlist" [src]="item.ImageShow ? item.ImageShow : 'https://www.w3schools.com/howto/img_avatar.png'"></td>
+        <td (click)=update(item)>{{item.Name}}</td>
+        <td (click)=update(item)>{{item.LastName}}</td>
+        <td (click)=update(item)>{{item.Email}}</td>
+        <td (click)=delete(item.ContactId)><i class="material-icons" id="deletecontact"> delete </i></td>
+    </tr>
+</table>
+<div class="card-footer pb-0 pt-3">
+    <ul *ngIf="service.gridValue.TotalPage>1" class="pagination">
+
+        <li [ngClass]="{disabled:service.gridValue.Page === 1}" class="page-item first-item">
+            <a (click)=setPage(1) class="page-link">First</a>
+        </li>
+        <li [ngClass]="{disabled:service.gridValue.Page === 1}" class="page-item previous-item">
+            <a (click)=setPage(service.gridValue.Page-1) class="page-link">Previous</a>
+        </li>
+        <li *ngFor="let page of [].constructor(service.gridValue.TotalPage) , let i = index"
+            [ngClass]="{active:service.gridValue.Page === i+1}" class="page-item number-item">
+            <a (click)=setPage(i+1) class="page-link">{{i+1}}</a>
+        </li>
+        <li [ngClass]="{disabled:service.gridValue.Page === service.gridValue.TotalPage}" class="page-item next-item">
+            <a (click)=setPage(service.gridValue.Page+1) class="page-link">Next</a>
+        </li>
+        <li [ngClass]="{disabled:service.gridValue.Page === service.gridValue.TotalPage}" class="page-item last-item">
+            <a (click)=setPage(service.gridValue.TotalPage) class="page-link">Last</a>
+        </li>
+    </ul>
+</div>

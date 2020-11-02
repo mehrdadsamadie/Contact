@@ -1,0 +1,12 @@
+D:\ContactProject\Repository\bin\Debug\netcoreapp2.2\Repository.deps.json
+D:\ContactProject\Repository\bin\Debug\netcoreapp2.2\Repository.dll
+D:\ContactProject\Repository\bin\Debug\netcoreapp2.2\Repository.pdb
+D:\ContactProject\Repository\bin\Debug\netcoreapp2.2\Entities.dll
+D:\ContactProject\Repository\bin\Debug\netcoreapp2.2\Entities.pdb
+D:\ContactProject\Repository\obj\Debug\netcoreapp2.2\Repository.csprojAssemblyReference.cache
+D:\ContactProject\Repository\obj\Debug\netcoreapp2.2\Repository.csproj.CoreCompileInputs.cache
+D:\ContactProject\Repository\obj\Debug\netcoreapp2.2\Repository.AssemblyInfoInputs.cache
+D:\ContactProject\Repository\obj\Debug\netcoreapp2.2\Repository.AssemblyInfo.cs
+D:\ContactProject\Repository\obj\Debug\netcoreapp2.2\Repository.csproj.CopyComplete
+D:\ContactProject\Repository\obj\Debug\netcoreapp2.2\Repository.dll
+D:\ContactProject\Repository\obj\Debug\netcoreapp2.2\Repository.pdb

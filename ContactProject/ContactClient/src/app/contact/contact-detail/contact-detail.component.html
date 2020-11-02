@@ -1,0 +1,199 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name="ContactId" #ContactId="ngModel" [(ngModel)]="service.formData.ContactId" />
+    <input type="hidden" name="AddressId" #AddressId="ngModel" [(ngModel)]="service.formData.AddressId" />
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="material-icons">account_circle</i>
+                </div>
+            </div>
+            <input name="Name" #Name="ngModel" [(ngModel)]="service.formData.Name" class="form-control"
+                placeholder="First Name" required />
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="material-icons">face</i>
+                </div>
+            </div>
+            <input name="LastName" #LastName="ngModel" [(ngModel)]="service.formData.LastName" class="form-control"
+                placeholder="Last Name" required />
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="material-icons">email</i>
+                </div>
+            </div>
+            <input name="Email" #Email="ngModel" [(ngModel)]="service.formData.Email" class="form-control"
+                placeholder="Email" required [email]="true" />
+        </div>
+
+    </div>
+
+
+
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="material-icons">settings_cell</i>
+                </div>
+            </div>
+            <input name="Phone" #Phone="ngModel" [(ngModel)]="service.formData.Phone" class="form-control"
+                placeholder="Phone" required minlength="10" maxlength="10" />
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="form-group ">
+        <div (click)="changeGender(true)" class="custom-control custom-radio custom-control-inline">
+            <input type="radio" class="custom-control-input" id="defaultInline1" name="Gender" [value]="true"
+                #Gender="ngModel" [(ngModel)]="service.formData.Gender">
+            <label class="custom-control-label" for="Male">Male</label>
+        </div>
+        <div (click)="changeGender(false)" class="custom-control custom-radio custom-control-inline">
+            <input type="radio" class="custom-control-input" id="defaultInline2" name="Gender" [value]="false"
+                #Gender="ngModel" [(ngModel)]="service.formData.Gender">
+            <label class="custom-control-label" for="Female">Female</label>
+        </div>
+
+
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="material-icons">home_work </i>
+                </div>
+            </div>
+            <input name="Street1" #Street1="ngModel" [(ngModel)]="service.formData.Street1" class="form-control"
+                placeholder="Line 1" required />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="material-icons">home_work </i>
+                </div>
+            </div>
+            <input name="Street2" #Street2="ngModel" [(ngModel)]="service.formData.Street2" class="form-control"
+                placeholder="Line 2" />
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="material-icons"> location_city</i>
+                </div>
+            </div>
+            <input name="City" #City="ngModel" [(ngModel)]="service.formData.City" class="form-control"
+                placeholder="City" required />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="material-icons">account_balance</i>
+                </div>
+            </div>
+            <input name="State" #State="ngModel" [(ngModel)]="service.formData.State" class="form-control"
+                placeholder="State" required />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="material-icons"> public</i>
+                </div>
+            </div>
+            <input name="Country" #Country="ngModel" [(ngModel)]="service.formData.Country" class="form-control"
+                placeholder="Country" required />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="material-icons">markunread_mailbox</i>
+                </div>
+            </div>
+            <input name="PostalCode" #PostalCode="ngModel" [(ngModel)]="service.formData.PostalCode"
+                class="form-control" placeholder="PostalCode" required />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="material-icons">language</i>
+                </div>
+            </div>
+            <input name="WebSite" #WebSite="ngModel" [(ngModel)]="service.formData.WebSite" class="form-control"
+                placeholder="WebSite" required />
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="material-icons"> event_note</i>
+                </div>
+            </div>
+            <input name="Note" #Note="ngModel" [(ngModel)]="service.formData.Note" class="form-control"
+                placeholder="Note" required />
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <div class="input-group">
+            <!-- <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="material-icons">add_a_photo </i>
+                </div>
+            </div> -->
+            <input name="Image" #Image="ngModel" [(ngModel)]="service.formData.Image" class="form-control"
+                placeholder="Image"  type="hidden"/>
+        </div>
+
+    </div>
+
+
+    <div>
+        <input type="file" #file placeholder="Choose file" (change)="service.uploadFile(file.files)"
+            style="display:none;">
+        <button type="button" class="btn btn-success" (click)="file.click()">Upload File</button>
+        <img id="avatar" [src]="service.formData.ImageShow ? service.formData.ImageShow : 'https://www.w3schools.com/howto/img_avatar.png'">
+    </div>
+
+<p></p>
+
+    <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" type="submit" [disabled]="form.invalid">Submit</button>
+    </div>
+</form>
+<ul>
+    <li *ngFor="let item of errorList; let i = index" class="message">
+        {{item}}
+    </li>
+</ul>

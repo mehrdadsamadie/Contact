@@ -1,0 +1,8 @@
+D:\ContactProject\Entities\bin\Debug\netcoreapp2.2\Entities.deps.json
+D:\ContactProject\Entities\bin\Debug\netcoreapp2.2\Entities.dll
+D:\ContactProject\Entities\bin\Debug\netcoreapp2.2\Entities.pdb
+D:\ContactProject\Entities\obj\Debug\netcoreapp2.2\Entities.csproj.CoreCompileInputs.cache
+D:\ContactProject\Entities\obj\Debug\netcoreapp2.2\Entities.AssemblyInfoInputs.cache
+D:\ContactProject\Entities\obj\Debug\netcoreapp2.2\Entities.AssemblyInfo.cs
+D:\ContactProject\Entities\obj\Debug\netcoreapp2.2\Entities.dll
+D:\ContactProject\Entities\obj\Debug\netcoreapp2.2\Entities.pdb
